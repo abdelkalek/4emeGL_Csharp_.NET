@@ -94,10 +94,23 @@ namespace Exe7
             }
 
         }
-
+        public bool TxtisEmpty(System.Windows.Forms.TextBox[] tab)
+        {
+            int i;
+            for (i = 0; i <= tab.Length - 1; i++)
+            {
+                if ((tab[i].Text == ""))
+                {
+                    tab[i].Focus();
+                    return false;
+                }
+            }
+            return true;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
-
+            TextBox[] list = new[] { Txt_numerique, Txt_decimale, Txt_alphabetique, Majus, Txt_munis };
+            if ((TxtisEmpty(list) != true)) MessageBox.Show("champ vide!!");
         }
 
         private void txt_Numerique2_KeyPress(object sender, KeyPressEventArgs e)
