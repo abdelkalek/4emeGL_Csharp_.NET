@@ -43,11 +43,27 @@ namespace gestion
         {
 
         }
+        public string convstring(String name)
+        {
+            String ch = "";
+            for (int i = 0; i <= name.Length - 1; i++)
+            {
+                if (name[i] == '\'')
+                {
+                    ch += "\''";
 
+                }
+                else
+                {
+                    ch += name[i];
+                }
+            }
+            return ch;
+        }
         private void Bnt_ajouter_Click(object sender, EventArgs e)
         {
             string txtinsert;
-            txtinsert = "insert into client (NumClient,NomClient,Ville,Rue,Cp,Tel) values(" + txt_num.Text + ",'" + txt_nom.Text + "','" + txt_ville.Text + "','" + txt_rue.Text + "'," + txt_cp.Text+ "," + txt_tel.Text + ")";
+            txtinsert = "insert into client (NumClient,NomClient,Ville,Rue,Cp,Tel) values(" + txt_num.Text + ",'" + convstring(txt_nom.Text) + "','" + txt_ville.Text + "','" + txt_rue.Text + "'," + txt_cp.Text + "," + txt_tel.Text + ")";
             lancerRequete(txtinsert);
         }
     }

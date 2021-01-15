@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDoracle", "BDoracle\BDorac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gestion", "gestion\gestion.csproj", "{938A8FCD-77F4-4F53-B405-048E4847B2F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaveFileText", "SaveFileText\SaveFileText.csproj", "{F50F069E-729C-4B14-8EBB-5B2CC5A76497}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Gestion Client", "Gestion Client\Gestion Client.vdproj", "{EE177DE4-3FFE-4A8D-8EC1-05294E1D707E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +85,12 @@ Global
 		{938A8FCD-77F4-4F53-B405-048E4847B2F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{938A8FCD-77F4-4F53-B405-048E4847B2F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{938A8FCD-77F4-4F53-B405-048E4847B2F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F50F069E-729C-4B14-8EBB-5B2CC5A76497}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F50F069E-729C-4B14-8EBB-5B2CC5A76497}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F50F069E-729C-4B14-8EBB-5B2CC5A76497}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F50F069E-729C-4B14-8EBB-5B2CC5A76497}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE177DE4-3FFE-4A8D-8EC1-05294E1D707E}.Debug|Any CPU.ActiveCfg = Debug
+		{EE177DE4-3FFE-4A8D-8EC1-05294E1D707E}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

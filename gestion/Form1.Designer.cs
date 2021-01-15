@@ -43,9 +43,9 @@
             this.Modifier_BNT = new System.Windows.Forms.Button();
             this.Ajouter_BNT = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.Txt_chercher = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Txt_chercher = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridClient)).BeginInit();
             this.panel2.SuspendLayout();
@@ -198,13 +198,15 @@
             this.panel3.Size = new System.Drawing.Size(778, 55);
             this.panel3.TabIndex = 2;
             // 
-            // Txt_chercher
+            // pictureBox1
             // 
-            this.Txt_chercher.Location = new System.Drawing.Point(168, 23);
-            this.Txt_chercher.Name = "Txt_chercher";
-            this.Txt_chercher.Size = new System.Drawing.Size(150, 20);
-            this.Txt_chercher.TabIndex = 0;
-            this.Txt_chercher.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(324, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 32);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -218,15 +220,13 @@
             this.label1.Text = "Chercher";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // Txt_chercher
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(324, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 32);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.Txt_chercher.Location = new System.Drawing.Point(168, 23);
+            this.Txt_chercher.Name = "Txt_chercher";
+            this.Txt_chercher.Size = new System.Drawing.Size(150, 20);
+            this.Txt_chercher.TabIndex = 0;
+            this.Txt_chercher.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Form1
             // 
@@ -240,6 +240,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Gestion des Clients";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Leave += new System.EventHandler(this.button1_Click);
             this.panel1.ResumeLayout(false);

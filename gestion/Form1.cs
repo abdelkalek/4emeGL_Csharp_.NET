@@ -19,7 +19,7 @@ namespace gestion
             InitializeComponent();
         }
 
-
+  
         public void charger_Liste_client()
         {
             dataGridClient.Rows.Clear();
@@ -67,6 +67,7 @@ namespace gestion
         {
             AjouterForm aF = new AjouterForm();
             aF.ShowDialog();
+
             charger_Liste_client();
 
         }
@@ -103,9 +104,11 @@ namespace gestion
             String req_sup;
             if (dataGridClient.RowCount == 0)
                 return;
-            index = dataGridClient.CurrentRow.Index;
+        
+            index = dataGridClient.CurrentRow.Index; /// datagridClient.SelectedRow.index
             numClient = dataGridClient.Rows[index].Cells[0].Value.ToString();
-            DialogResult supp = (MessageBox.Show("Voulez supprimer le Client '" + dataGridClient.Rows[index].Cells[1].Value.ToString() + "'", "suppression Client", MessageBoxButtons.YesNo));
+            DialogResult supp = (MessageBox.Show("Voulez supprimer le Client '" + dataGridClient.Rows[index].Cells[1].Value.ToString() + "'", "suppression de Client", MessageBoxButtons.YesNo));
+         
             if (supp == DialogResult.Yes)
             {
                 req_sup = "delete from client where numClient =" + numClient + "";
@@ -118,7 +121,10 @@ namespace gestion
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Authentification I_log = (Authentification)Application.OpenForms["Authentification"];
+            I_log.Close();
             this.Close(); 
+      
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -139,7 +145,13 @@ namespace gestion
             ocn.Close();
         }
 
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit(); 
+        }
 
+
+       
     }
-
+       
 }
